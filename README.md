@@ -1,0 +1,3 @@
+### Anime web app
+
+Repository for the future web project, coming soon...
