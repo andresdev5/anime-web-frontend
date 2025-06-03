@@ -1,0 +1,51 @@
+<nav class="bg-gray-800 text-white p-4 shadow-md">
+    <div class="flex items-center justify-between px-4 sm:px-6 lg:px-8">
+        <!-- Logo y Menú Principal -->
+        <div class="flex items-center space-x-4">
+            <!-- Logo -->
+            <div class="mr-10">
+                <a routerLink="/" class="text-2xl font-bold">
+                    <!-- Podrías usar una etiqueta <img> aquí para tu logo -->
+                    LOGO
+                </a>
+            </div>
+            <!-- Menú Principal -->
+            <p-menubar 
+                [model]="menuItems" 
+                styleClass="app-navbar"></p-menubar>
+        </div>
+
+        <!-- Campo de Búsqueda (Centro) -->
+        <div class="flex-grow flex justify-center px-4">
+            <div class="relative w-full max-w-xs lg:max-w-md">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                    <!-- Icono de búsqueda (ejemplo con SVG, puedes usar un icono de PrimeIcons o FontAwesome) -->
+                    <svg class="h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                    </svg>
+                </span>
+                <input 
+                    type="text" 
+                    placeholder="Buscar anime..." 
+                    class="block w-full bg-gray-700 text-white placeholder-gray-400 border border-gray-600 rounded-md py-2 pl-10 pr-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                />
+            </div>
+        </div>
+
+        <!-- Login/Signup y Perfil de Usuario (Derecha) -->
+        <div class="flex items-center space-x-4">
+            <a routerLink="/login" class="hover:text-gray-300">Login</a>
+            <a routerLink="/signup" class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-md text-sm font-medium">Sign Up</a>
+            <!-- Espacio para el perfil de usuario, podrías usar un p-avatar o p-menu aquí -->
+            <div class="hidden md:block">
+                 <!-- Por ejemplo, un icono de usuario -->
+                 <button class="p-2 rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                    <span class="sr-only">Ver perfil</span>
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>

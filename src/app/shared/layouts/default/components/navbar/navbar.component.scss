@@ -1,0 +1,19 @@
+@reference "tailwindcss"
+@reference "tailwindcss-primeui";
+
+.app-navbar {
+    background: transparent;
+    border: none;
+
+    p-menubarsub {
+        @apply bg-transparent border-none;
+
+        li a {
+            @apply text-white;
+
+            &:hover {
+                @apply text-gray-800;
+            }
+        }
+    }
+}
